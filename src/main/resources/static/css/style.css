@@ -1,0 +1,186 @@
+@font-face {
+    font-family: 'Cafe24Supermagic-Bold-v1.0';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/Cafe24Supermagic-Bold-v1.0.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body{
+    margin: 0px;
+    background-image: url(/images/back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Cafe24Supermagic-Bold-v1.0';
+}
+
+.container {
+    width: 90%;
+    height: 80%;
+    padding: 20px;
+    overflow: hidden;
+    margin-bottom: 1em; 
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+
+/* Section 1 Start */
+.input-area {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left {
+    display: flex;
+    width: 80%;
+}
+
+input[type='date']::before {
+    content: attr(data-placeholder);
+    width: 100%;
+}
+
+input[type='date']:focus::before,
+input[type='date']:valid::before {
+    display: none;
+}
+
+#date-input {
+    margin-left: 10px;
+    width: 30%;
+    border: none;
+    border-bottom: 1px solid rgb(222, 208, 244);
+}
+
+#task-input {
+    transition: padding-top 0.2s ease, margin-top 0.2s ease;
+    width: 50%;
+    border: none;
+    border: 1px solid rgb(137, 71, 237);
+}
+
+#task-input:focus {
+    outline: none;
+    border-bottom: 3px solid rgb(137, 71, 237);
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    transition: 0.5s;
+    padding-top: 5px;
+  }
+
+#add-Button {
+    border: none;
+    background-color: rgb(181, 190, 245);
+}
+
+#danger-Button {
+    border: none;
+    background-color: white;
+} 
+
+.input-area button {
+    margin: 0;
+}
+
+.fa-exclamation-circle {
+    color: rgb(233, 156, 156); 
+    font-size: 25px;
+}
+/* Section 1 End */
+
+/* Section 2 Start */
+.task-area{
+    border: 1px solid lightgray;
+    height: calc(80% - 0.5em);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0.5em; 
+}
+
+/* 탭 영역 */
+.task-tabs {
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    position: relative;
+    height: 50px;
+    color: white;
+    background-color: rgb(212, 223, 246);
+}
+
+#tab-underline {
+    background-color: rgb(148, 169, 213);
+    height: 4px !important;
+    position: absolute;
+    top: 46px;
+    left: 0px;
+    width: 48px;
+    transition: 0.5s;
+    padding: 0px;
+  }
+
+.task-tabs div{
+    padding: 1em;
+    cursor: pointer;
+}
+
+/* 보드 영역 */
+.task-boards {
+    height: 88%;
+    overflow: hidden;
+	overflow-y: auto;
+  }
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+}
+
+.task:hover{
+    background-color: rgb(250, 249, 232);
+}
+
+.task-done {
+    text-decoration: line-through;
+    background-color: rgb(250, 249, 232);
+  }
+
+.task span {
+    padding: 1em;
+  }
+
+.button-box {
+    display: flex;
+  }
+  
+.button-box button {
+    color: white;
+    font: 20px;
+    height: 100%;
+    border: none;
+    width: 5em;
+    margin: 0;
+    background-color: rgb(130, 145, 216);
+    transition: 0.5s;
+  }
+
+.dateView {
+    color: rgb(130, 145, 216);
+}
+
+.deadline {
+    background-color: rgb(253, 225, 225);
+  }
+
+
+
+  
